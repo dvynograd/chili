@@ -1,0 +1,5 @@
+type Category {
+    id: Int
+    title: String
+    url: String
+}

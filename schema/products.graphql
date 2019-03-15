@@ -1,0 +1,13 @@
+# import Category from "categories.graphql"
+
+type Product {
+    id: Int,
+    sku: String
+    name: String
+    short_description: String
+    description: String
+    price: Float
+    image: String
+    url: String
+    categories: [Category]
+}

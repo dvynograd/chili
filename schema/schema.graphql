@@ -1,0 +1,5 @@
+# import Product from "products.graphql"
+
+type Query {
+    products: [Product]
+}
