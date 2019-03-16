@@ -8,12 +8,10 @@ module.exports =  [
         url: '/sku-1',
         categories: [
             {
-                id: 1,
                 title: 'phones',
                 url: '/phones'
             },
             {
-                id: 1,
                 title: 'iphone',
                 url: '/phones/iphone'
             },

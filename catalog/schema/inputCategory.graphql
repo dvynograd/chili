@@ -1,4 +1,4 @@
-type Category {
+input InputCategory {
     title: String
     url: String
 }

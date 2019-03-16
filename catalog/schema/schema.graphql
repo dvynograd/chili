@@ -1,5 +1,10 @@
 # import Product from "products.graphql"
+# import InputProduct from "inputProduct.graphql"
 
 type Query {
     products: [Product]
+}
+
+type Mutation {
+    addProduct(product: InputProduct!): Boolean
 }
