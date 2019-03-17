@@ -1,21 +1,21 @@
 {
-  "name": "chili",
+  "name": "server",
   "version": "1.0.0",
-  "description": "Ecommerce Prototype",
+  "description": "Main Server",
   "main": "index.js",
-  "repository": "https://github.com/dvynograd/chili",
-  "author": "Dmytro Vynograd",
-  "license": "MIT",
   "scripts": {
     "start": "node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "https://github.com/dvynograd/chili",
+  "author": "Dmytro Vynograd",
+  "license": "MIT",
   "dependencies": {
+    "apollo-link-http": "^1.5.14",
     "apollo-server-express": "^2.4.8",
     "express": "^4.16.4",
     "graphql": "^14.1.1",
-    "graphql-import": "^0.7.1",
-    "mongodb": "^3.1.13",
-    "name": "^0.0.2"
+    "graphql-tools": "^4.0.4",
+    "node-fetch": "^2.3.0"
   }
 }

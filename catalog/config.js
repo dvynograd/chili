@@ -4,5 +4,8 @@ module.exports = {
         port: process.env.MONGO_PORT,
         user: process.env.MONGO_USERNAME,
         password: process.env.MONGO_PASSWORD
+    },
+    server: {
+        port: process.env.port || 4000
     }
 };

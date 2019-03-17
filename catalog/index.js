@@ -1,10 +1,15 @@
-const { ApolloServer, gql } = require('apollo-server');
-const { importSchema } = require('graphql-import');
-const typeDefs = importSchema('./schema/schema.graphql');
-const resolvers = require('./resolvers');
+const { ApolloServer } = require('apollo-server-express'),
+    { importSchema } = require('graphql-import'),
+    typeDefs = importSchema('./schema/schema.graphql'),
+    resolvers = require('./resolvers'),
+    config = require('./config'),
+    express = require('express'),
+    app = express();
 
-const server = new ApolloServer({typeDefs, resolvers});
+const server = new ApolloServer({ typeDefs,  resolvers});
+server.applyMiddleware({ app, path: '/graphql' });
 
-server.listen().then(({ url }) => {
-    console.log(`🚀 Server ready at ${url}`);
+
+app.listen({ port: config.server.port }, () => {
+    console.log(`Apollo Server on http://localhost:${config.server.port}/graphql`);
 });
