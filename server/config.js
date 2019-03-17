@@ -2,7 +2,7 @@ module.exports = {
     services: [
         {
             name: 'Catalog',
-            url: 'http://catalog:4000/graphql'
+            url: 'http://catalog:3000/graphql'
         }
     ],
     server: {
