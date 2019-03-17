@@ -1,4 +1,5 @@
 type Category {
+    _id: ID
     title: String
     url: String
 }

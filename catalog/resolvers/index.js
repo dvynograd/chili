@@ -1,32 +1,15 @@
-const mongo = require('../db/mongo');
-
-let getProducts = () => new Promise((resolve, reject) => {
-    mongo.connect((error, db) => {
-        if (error) reject(error);
-        const dbo = db.db('catalog');
-        resolve(dbo.collection('products').find().toArray());
-    });
-});
-
-let productsResolver = async () => await getProducts();
-
-let addProduct = product => new Promise((resolve, reject) => {
-    mongo.connect((error, db) => {
-        if (error) reject(error);
-        const dbo = db.db('catalog');
-        dbo.collection('products').insert(product, (error, result) => {
-            error ? reject(error) : resolve(result.result.ok)
-        });
-    });
-});
-
-let addProductResolver = async (_, {product}) => await addProduct(product);
+const productsResolver = require('./products'),
+    addProductResolver = require('./addProduct'),
+    categoriesResolver = require('./categories'),
+    addCategoryResolver = require('./addCategory');
 
 module.exports = {
     Query: {
-        products: productsResolver
+        products: productsResolver,
+        categories: categoriesResolver
     },
     Mutation: {
-        addProduct: addProductResolver
+        addProduct: addProductResolver,
+        addCategory: addCategoryResolver
     }
 };

@@ -8,5 +8,5 @@ input InputProduct {
     price: Float
     image: String
     url: String
-    categories: [InputCategory]
+    categories: [ID]
 }
