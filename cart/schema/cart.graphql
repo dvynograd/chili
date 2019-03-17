@@ -1,0 +1,8 @@
+# import CartItem from "cartItem.graphql"
+# import CartAddress from "cartAddress.graphql"
+
+type Cart {
+    items: [CartItem]
+    shipping_addresses: CartAddress!
+    billing_address: CartAddress!
+}

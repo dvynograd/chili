@@ -1,0 +1,9 @@
+type CartAddress {
+    firstname: String
+    lastname: String
+    street: String
+    city: String
+    postcode: String
+    country: String
+    telephone: String
+}

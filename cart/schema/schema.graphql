@@ -1,0 +1,10 @@
+# import Cart from "cart.graphql"
+
+type Query {
+    cart(cart_id: String!): Cart
+}
+
+#type Mutation {
+#    createEmptyCart: String
+#    addProductsToCart(input: AddSimpleProductsToCartInput): AddProductsToCartOutput
+#}

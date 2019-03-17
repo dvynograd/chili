@@ -1,8 +1,10 @@
 module.exports = {
     services: [
         {
-            name: 'Catalog',
             url: 'http://catalog:3000/graphql'
+        },
+        {
+            url: 'http://cart:3000/graphql'
         }
     ],
     server: {
