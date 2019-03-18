@@ -10,7 +10,7 @@ let addProduct = product => new Promise((resolve, reject) => {
         if (error) reject(error);
         const dbo = db.db('catalog');
         dbo.collection('products').insert(product, (error, result) => {
-            error ? reject(error) : resolve(result.result.ok)
+            error ? reject(error) : resolve({result: result.result.ok})
         });
     });
 });

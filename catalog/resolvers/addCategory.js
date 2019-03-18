@@ -5,7 +5,7 @@ let addCategory = category => new Promise((resolve, reject) => {
         if (error) reject(error);
         const dbo = db.db('catalog');
         dbo.collection('categories').insert(category, (error, result) => {
-            error ? reject(error) : resolve(result.result.ok)
+            error ? reject(error) : resolve(({result: result.result.ok}))
         });
     });
 });

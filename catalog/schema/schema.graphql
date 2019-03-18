@@ -1,6 +1,7 @@
 # import Product from "products.graphql"
 # import Category from "categories.graphql"
 # import InputProduct from "inputProduct.graphql"
+# import Result from "result.graphql"
 
 type Query {
     products: [Product]
@@ -8,6 +9,6 @@ type Query {
 }
 
 type Mutation {
-    addProduct(product: InputProduct!): Boolean
-    addCategory(category: InputCategory!): Boolean
+    addProduct(product: InputProduct!): Result
+    addCategory(category: InputCategory!): Result
 }
