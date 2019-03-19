@@ -11,4 +11,5 @@ type Query {
 type Mutation {
     addProduct(product: InputProduct!): Result
     addCategory(category: InputCategory!): Result
+    removeProduct(productId: ID!): Result
 }

@@ -1,7 +1,8 @@
 const productsResolver = require('./products'),
     addProductResolver = require('./addProduct'),
     categoriesResolver = require('./categories'),
-    addCategoryResolver = require('./addCategory');
+    addCategoryResolver = require('./addCategory'),
+    removeProductResolver = require('./removeProduct');
 
 module.exports = {
     Query: {
@@ -10,6 +11,7 @@ module.exports = {
     },
     Mutation: {
         addProduct: addProductResolver,
-        addCategory: addCategoryResolver
+        addCategory: addCategoryResolver,
+        removeProduct: removeProductResolver,
     }
 };
