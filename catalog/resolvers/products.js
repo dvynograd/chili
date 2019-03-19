@@ -9,7 +9,9 @@ let addCategory = categoryId => new Promise((resolve, reject) => {
 });
 
 let updateCategories = products => products.map(product => {
-    product.categories = product.categories.map(category => addCategory(category));
+    if (product.categories) {
+        product.categories = product.categories.map(category => addCategory(category));
+    }
     return product;
 });
 
